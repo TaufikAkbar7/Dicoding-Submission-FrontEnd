@@ -1,2 +1,1 @@
-const cuk = (aa) => aa;
-cuk(2);
+import './style.css';
