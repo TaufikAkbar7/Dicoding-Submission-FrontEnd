@@ -4,7 +4,7 @@
   "description": "submission for dicoding",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss build src/style.css -o public/style.css",
+    "build-css": "tailwindcss build src/styles/tailwind.css -o src/styles/index.css",
     "build": "webpack --config webpack.prod.js",
     "start": "webpack serve --config webpack.dev.js",
     "lint": "eslint src/index.js",

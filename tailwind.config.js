@@ -7,7 +7,14 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      // backgroundImage: (theme) => ({
+      //   hero: "url('../assets/bg-hero.jpg')",
+      // }),
+      width: {
+        '950px': '950px',
+      },
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -20,13 +27,12 @@ module.exports = {
       green: colors.green,
       purple: colors.purple,
       pink: colors.pink,
-      primaryColor: '#0C0F14',
-      primaryColor60: 'rgba(12, 15, 20, 0.6)',
-      secondaryColor: '#fff',
-      secondaryColor50: 'rgba(255, 255, 255, 0.5)',
-      thirdColor: '#D17842',
-      fourColor: '#131820',
-      fiveColor: '#171D26',
+      primaryColor: '#191D2C',
+      secondaryColor: '#373E4B',
+      thirdColor: '#EA4F47',
+    },
+    fontFamily: {
+      roboto: ['Roboto Slab', 'sans-serif'],
     },
   },
   variants: {
