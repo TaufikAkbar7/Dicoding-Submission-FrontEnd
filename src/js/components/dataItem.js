@@ -1,16 +1,16 @@
 class DataItem extends HTMLElement {
   constructor() {
     super();
-    this.shadowDOM = this.attachShadow({ mode: 'open' }); 
+    this.shadowDOM = this.attachShadow({ mode: 'open' });
   }
 
-  set data({ name, img }) {
-      this._data = { name, img};
-      this.render();
+  set data({ name, img, id }) {
+    this._data = { name, img, id };
+    this.render();
   }
 
   render() {
-      this.shadowDOM.innerHTML = `
+    this.shadowDOM.innerHTML = `
 
       <style>
       .object-cover {
@@ -52,7 +52,6 @@ class DataItem extends HTMLElement {
       </div>
       `;
   }
-
 }
 
-customElements.define("data-item", DataItem);
+customElements.define('data-item', DataItem);

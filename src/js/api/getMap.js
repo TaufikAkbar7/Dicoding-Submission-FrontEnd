@@ -7,6 +7,7 @@ class Map {
         const accessData = res.data.data;
         const getData = accessData.map((item) => {
           const data = {
+            id: item.uuid,
             name: item.displayName,
             img: item.splash,
           };

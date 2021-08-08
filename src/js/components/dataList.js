@@ -12,7 +12,7 @@ class DataList extends HTMLElement {
   }
 
   render() {
-    this.shadowDOM.innerHTML = ``;
+    this.shadowDOM.innerHTML = '';
     this._listData.forEach((item) => {
       const itemElement = document.createElement('data-item');
       itemElement.data = item;
