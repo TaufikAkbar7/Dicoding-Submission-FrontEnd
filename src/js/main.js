@@ -1,10 +1,14 @@
-import { Agent, Weapon, Map } from './api';
+import {
+  Agent, Weapon, Map, DetailAgent,
+} from './api';
 import './components/dataList';
+import './components/detailAgent';
 
 const main = () => {
   const dataListElementAgent = document.querySelector('#agent');
   const dataListElementWeapon = document.querySelector('#weapon');
   const dataListElementMap = document.querySelector('#map');
+  const getElementDetail = document.querySelector('#detail');
 
   const renderAgents = (results) => {
     dataListElementAgent.listData = results;
@@ -14,6 +18,10 @@ const main = () => {
   };
   const renderMap = (results) => {
     dataListElementMap.listData = results;
+  };
+  const renderDetailAgent = (results) => {
+    // console.log(results)
+    getElementDetail.data = results;
   };
 
   const render = async () => {
@@ -30,7 +38,26 @@ const main = () => {
     }
   };
 
-  render();
+  const getParams = (id) => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(id);
+  };
+
+  const renderDetail = async () => {
+    try {
+      const resultDetailAgent = await DetailAgent.getDetailAgent(getParams('id'));
+
+      renderDetailAgent(resultDetailAgent);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  if (window.location.pathname === '/detail.html') {
+    renderDetail();
+  } else {
+    render();
+  }
 };
 
 export default main;

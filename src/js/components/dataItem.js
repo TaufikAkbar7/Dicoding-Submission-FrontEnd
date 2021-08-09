@@ -9,6 +9,10 @@ class DataItem extends HTMLElement {
     this.render();
   }
 
+  handleLink(id) {
+    console.log(id);
+  }
+
   render() {
     this.shadowDOM.innerHTML = `
 
@@ -44,13 +48,22 @@ class DataItem extends HTMLElement {
         line-height: 1.75rem;
       }
 
+      .cursor-pointer {
+        cursor: pointer;
+      }
+
       </style>
 
-      <div class="flex flex-col items-center">
-      <img class="object-cover" width="100" src="${this._data.img}">
+      <div class="flex flex-col items-center" data-id=${this._data.id}>
+      <img class="object-cover cursor-pointer img" width="100" src="${this._data.img}">
       <p class="text-white font-semibold text-lg">${this._data.name}</p>
       </div>
       `;
+
+    this.shadowDOM.querySelector('.img').addEventListener('click', (e) => {
+      const getId = e.target.parentElement.dataset.id;
+      window.location.href = `/detail.html?id=${getId}`;
+    });
   }
 }
 
