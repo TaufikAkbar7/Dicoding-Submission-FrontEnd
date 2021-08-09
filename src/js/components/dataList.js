@@ -8,7 +8,6 @@ class DataList extends HTMLElement {
 
   set listData(listData) {
     this._listData = listData;
-    // console.log(listData)
     this.render();
   }
 

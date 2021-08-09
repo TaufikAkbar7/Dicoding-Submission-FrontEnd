@@ -1,7 +1,5 @@
-import axios from 'axios';
-
 class Agent {
-  static getDataAgent() {
+  static getDataAgent(axios) {
     return axios.get('https://valorant-api.com/v1/agents')
       .then((res) => {
         const accessData = res.data.data;

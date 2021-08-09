@@ -1,3 +1,4 @@
+import axios from 'axios';
 import {
   Agent, Weapon, Map, DetailAgent,
 } from './api';
@@ -20,15 +21,14 @@ const main = () => {
     dataListElementMap.listData = results;
   };
   const renderDetailAgent = (results) => {
-    // console.log(results)
     getElementDetail.data = results;
   };
 
   const render = async () => {
     try {
-      const resultAgent = await Agent.getDataAgent();
-      const resultWeapon = await Weapon.getDataWeapon();
-      const resultMap = await Map.getDataMap();
+      const resultAgent = await Agent.getDataAgent(axios);
+      const resultWeapon = await Weapon.getDataWeapon(axios);
+      const resultMap = await Map.getDataMap(axios);
 
       renderAgents(resultAgent);
       renderWeapons(resultWeapon);
@@ -45,7 +45,7 @@ const main = () => {
 
   const renderDetail = async () => {
     try {
-      const resultDetailAgent = await DetailAgent.getDetailAgent(getParams('id'));
+      const resultDetailAgent = await DetailAgent.getDetailAgent(getParams('id', axios));
 
       renderDetailAgent(resultDetailAgent);
     } catch (error) {

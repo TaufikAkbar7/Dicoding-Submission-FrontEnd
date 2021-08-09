@@ -1,7 +1,5 @@
-import axios from 'axios';
-
 class Map {
-  static getDataMap() {
+  static getDataMap(axios) {
     return axios.get('https://valorant-api.com/v1/maps')
       .then((res) => {
         const accessData = res.data.data;

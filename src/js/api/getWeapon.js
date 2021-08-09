@@ -1,7 +1,5 @@
-import axios from 'axios';
-
 class Weapon {
-  static getDataWeapon() {
+  static getDataWeapon(axios) {
     return axios.get('https://valorant-api.com/v1/weapons')
       .then((res) => {
         const accessData = res.data.data;
