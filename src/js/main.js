@@ -53,8 +53,17 @@ const main = () => {
     }
   };
 
+  const handleLink = () => {
+    const getIconElement = document.querySelector('span');
+    getIconElement.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.view.window.location.href = '/';
+    });
+  };
+
   if (window.location.pathname === '/detail.html') {
     renderDetail();
+    handleLink();
   } else {
     render();
   }
