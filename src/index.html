@@ -10,24 +10,20 @@
     <title>Valorant Stats</title>
 </head>
 <body>
-    <section class="min-h-screen flex items-center" id="hero">
-        <div class="container mx-auto flex justify-center flex-col items-center bg-yellow-400">
-            <h1 class="text-white text-4xl font-bold">Valorant Stats</h1>
-            <input class="mt-5 border-2 border-thirdColor rounded py-5 px-10 bg-black text-white" size="50" type="text" name="search" placeholder="search players">
+    <section class="min-h-screen bg-primaryColor py-5">
+        <div class="w-950px mx-auto bg-secondaryColor p-5">
+            <h2 class="text-xl text-white font-semibold text-center">Leadorboard Top 5</h2>
+            <data-list-leader class="flex flex-wrap justify-center items-center mt-5" id="leadorboard"></data-list-leader>
         </div>
     </section>
     <section class="min-h-screen bg-primaryColor py-5">
         <div class="w-950px mx-auto bg-secondaryColor p-5">
-            <h2 class="text-xl text-gray-400 font-semibold text-center">Agents</h2>
+            <h2 class="text-xl text-white font-semibold text-center">Agents</h2>
             <data-list class="flex flex-wrap justify-center items-center mt-5" id="agent"></data-list>
         </div>
         <div class="w-950px mx-auto bg-secondaryColor p-5 mt-10">
-            <h2 class="text-xl text-gray-400 font-semibold text-center">Weapons</h2>
+            <h2 class="text-xl text-white font-semibold text-center">Weapons</h2>
             <data-list class="flex flex-wrap justify-center items-center mt-5" id="weapon"></data-list>
-        </div>
-        <div class="w-950px mx-auto bg-secondaryColor p-5 mt-10">
-            <h2 class="text-xl text-gray-400 font-semibold text-center">Maps</h2>
-            <data-list class="flex flex-wrap justify-center items-center mt-5" id="map"></data-list>
         </div>
     </section>
 </body>

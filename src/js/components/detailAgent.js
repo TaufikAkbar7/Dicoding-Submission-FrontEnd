@@ -6,7 +6,6 @@ class DetailAgent extends HTMLElement {
 
   set data(data) {
     this._data = data;
-    console.log(this._data);
     this.render();
   }
 
@@ -80,7 +79,8 @@ class DetailAgent extends HTMLElement {
         }
 
         .text-skill {
-          color: #56B7B2;
+          --tw-text-opacity: 1;
+          color: rgba(96, 165, 250, var(--tw-text-opacity));
         }
 
         .text-gray {

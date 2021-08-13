@@ -34,18 +34,18 @@ class DataItem extends HTMLElement {
         align-items: center;
       }
       
-      .text-white {
+      .text-gray {
         --tw-text-opacity: 1;
-        color: rgba(255, 255, 255, var(--tw-text-opacity));
+        color: rgba(156, 163, 175, var(--tw-text-opacity));
       }
 
       .font-semibold {
         font-weight: 600;
       }
 
-      .text-lg {
-        font-size: 1.125rem;
-        line-height: 1.75rem;
+      .text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
       }
 
       .cursor-pointer {
@@ -56,7 +56,7 @@ class DataItem extends HTMLElement {
 
       <div class="flex flex-col items-center" data-id=${this._data.id}>
       <img class="object-cover cursor-pointer img" width="100" src="${this._data.img}">
-      <p class="text-white font-semibold text-lg">${this._data.name}</p>
+      <p class="text-gray font-semibold text-sm">${this._data.name}</p>
       </div>
       `;
 

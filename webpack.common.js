@@ -31,5 +31,9 @@ module.exports = {
       template: './src/detail.html',
       filename: 'detail.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/detailPlayer.html',
+      filename: 'detailPlayer.html',
+    }),
   ],
 };

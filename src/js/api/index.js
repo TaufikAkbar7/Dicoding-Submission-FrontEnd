@@ -1,10 +1,10 @@
 import Agent from './getAgent';
 import Weapon from './getWeapon';
-import Map from './getMap';
 import DetailAgent from './getDetailAgent';
-import getDetailWeapon from './getDetailWeapon';
-import getDetailMap from './getDetailMap';
+import DetailWeapon from './getDetailWeapon';
+import Leaderboard from './getLeaderboard';
+import Player from './getPlayerDetail';
 
 export {
-  Agent, Map, Weapon, DetailAgent, getDetailWeapon, getDetailMap,
+  Agent, Weapon, DetailAgent, DetailWeapon, Leaderboard, Player,
 };
