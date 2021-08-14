@@ -1,4 +1,4 @@
-class DataItem extends HTMLElement {
+class DataItemAgent extends HTMLElement {
   constructor() {
     super();
     this.shadowDOM = this.attachShadow({ mode: 'open' });
@@ -7,10 +7,6 @@ class DataItem extends HTMLElement {
   set data({ name, img, id }) {
     this._data = { name, img, id };
     this.render();
-  }
-
-  handleLink(id) {
-    console.log(id);
   }
 
   render() {
@@ -52,9 +48,21 @@ class DataItem extends HTMLElement {
         cursor: pointer;
       }
 
+      .ml-2 {
+        margin-left: 2rem;
+      }
+
+      div:hover {
+        background-color: #191D2C;
+      }
+
+      .p-3 {
+        padding: 1rem;
+      }
+
       </style>
 
-      <div class="flex flex-col items-center" data-id=${this._data.id}>
+      <div class="flex flex-col items-center ml-2 p-3" data-id=${this._data.id}>
       <img class="object-cover cursor-pointer img" width="100" src="${this._data.img}">
       <p class="text-gray font-semibold text-sm">${this._data.name}</p>
       </div>
@@ -62,9 +70,9 @@ class DataItem extends HTMLElement {
 
     this.shadowDOM.querySelector('.img').addEventListener('click', (e) => {
       const getId = e.target.parentElement.dataset.id;
-      window.location.href = `/detail.html?id=${getId}`;
+      window.location.href = `/detailAgent.html?id=${getId}`;
     });
   }
 }
 
-customElements.define('data-item', DataItem);
+customElements.define('data-item-agent', DataItemAgent);

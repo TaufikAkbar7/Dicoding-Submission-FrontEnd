@@ -28,8 +28,12 @@ module.exports = {
       filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
-      template: './src/detail.html',
-      filename: 'detail.html',
+      template: './src/detailAgent.html',
+      filename: 'detailAgent.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/detailWeapon.html',
+      filename: 'detailWeapon.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/detailPlayer.html',

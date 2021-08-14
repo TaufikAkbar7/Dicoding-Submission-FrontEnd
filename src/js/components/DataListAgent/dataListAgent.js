@@ -1,6 +1,6 @@
-import './dataItem';
+import './dataItemAgent';
 
-class DataList extends HTMLElement {
+class DataListAgent extends HTMLElement {
   constructor() {
     super();
     this.shadowDOM = this.attachShadow({ mode: 'open' });
@@ -14,11 +14,11 @@ class DataList extends HTMLElement {
   render() {
     this.shadowDOM.innerHTML = '';
     this._listData.forEach((item) => {
-      const itemElement = document.createElement('data-item');
+      const itemElement = document.createElement('data-item-agent');
       itemElement.data = item;
       this.shadowDOM.appendChild(itemElement);
     });
   }
 }
 
-customElements.define('data-list', DataList);
+customElements.define('data-list-agent', DataListAgent);

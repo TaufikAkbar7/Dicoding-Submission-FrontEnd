@@ -1,17 +1,17 @@
 class DetailPlayer extends HTMLElement {
-    constructor() {
-        super();
-        this.shadowDOM = this.attachShadow({ mode: 'open' });
-      }
-    
-    set data(data) {
-        this._data = data;
-        console.log(data);
-        this.render();
-    }
+  constructor() {
+    super();
+    this.shadowDOM = this.attachShadow({ mode: 'open' });
+  }
 
-    render() {
-        this.shadowDOM.innerHTML = `
+  set data(data) {
+    this._data = data;
+    console.log(data);
+    this.render();
+  }
+
+  render() {
+    this.shadowDOM.innerHTML = `
 
         <style>
         
@@ -82,8 +82,8 @@ class DetailPlayer extends HTMLElement {
             width: 100%;
         }
 
-        .ml-2 {
-            margin-left: 2rem;
+        .ml-1 {
+            margin-left: 1rem;
         }
 
         .mt-2 {
@@ -109,37 +109,37 @@ class DetailPlayer extends HTMLElement {
                 <p>Total Matchs: ${this._data.by_season.e1a1.number_of_games}</p>
                 <p>Wins: ${this._data.by_season.e1a1.wins}</p>
             </div>
-            <div class="ml-2 bg-card flex flex-col rounded items-center p-5">
+            <div class="ml-1 bg-card flex flex-col rounded items-center p-5">
                 <p class="text-white">Eps 1 Act 2</p>
                 <p>${this._data.by_season.e1a2.final_rank_patched}</p>
                 <p>Total Matchs: ${this._data.by_season.e1a2.number_of_games}</p>
                 <p>Wins: ${this._data.by_season.e1a2.wins}</p>
             </div>
-            <div class="ml-2 bg-card flex flex-col rounded items-center p-5">
+            <div class="ml-1 bg-card flex flex-col rounded items-center p-5">
                 <p class="text-white">Eps 1 Act 3</p>
                 <p>${this._data.by_season.e1a3.final_rank_patched}</p>
                 <p>Total Matchs: ${this._data.by_season.e1a3.number_of_games}</p>
                 <p>Wins: ${this._data.by_season.e1a3.wins}</p>
             </div>
-            <div class="ml-2 bg-card flex flex-col rounded items-center p-5">
+            <div class="ml-1 bg-card flex flex-col rounded items-center p-5">
                 <p class="text-white">Eps 2 Act 1</p>
                 <p>${this._data.by_season.e2a1.final_rank_patched}</p>
                 <p>Total Matchs: ${this._data.by_season.e2a1.number_of_games}</p>
                 <p>Wins: ${this._data.by_season.e2a1.wins}</p>
             </div>
-            <div class="ml-2 mt-2 bg-card flex flex-col rounded items-center p-5">
+            <div class="ml-1 bg-card flex flex-col rounded items-center p-5">
                 <p class="text-white">Eps 2 Act 2</p>
                 <p>${this._data.by_season.e2a2.final_rank_patched}</p>
                 <p>Total Matchs: ${this._data.by_season.e2a2.number_of_games}</p>
                 <p>Wins: ${this._data.by_season.e2a2.wins}</p>
             </div>
-            <div class="ml-2 mt-2 bg-card flex flex-col rounded items-center p-5">
+            <div class="ml-1 mt-2 bg-card flex flex-col rounded items-center p-5">
                 <p class="text-white">Eps 2 Act 3</p>
                 <p>${this._data.by_season.e2a3.final_rank_patched}</p>
                 <p>Total Matchs: ${this._data.by_season.e2a3.number_of_games}</p>
                 <p>Wins: ${this._data.by_season.e2a3.wins}</p>
             </div>
-            <div class="ml-2 mt-2 bg-card flex flex-col rounded items-center p-5">
+            <div class="ml-1 mt-2 bg-card flex flex-col rounded items-center p-5">
                 <p class="text-white">Eps 3 Act 1</p>
                 <p>${this._data.by_season.e3a1.final_rank_patched}</p>
                 <p>Total Matchs: ${this._data.by_season.e3a1.number_of_games}</p>
@@ -148,8 +148,7 @@ class DetailPlayer extends HTMLElement {
         </div>
         </div>
         `;
-    }
-
+  }
 }
 
 customElements.define('detail-player', DetailPlayer);

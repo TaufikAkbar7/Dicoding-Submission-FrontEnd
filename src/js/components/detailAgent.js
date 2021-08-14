@@ -100,6 +100,31 @@ class DetailAgent extends HTMLElement {
           color: #EA5053;
         }
 
+        @media(min-width: 576px) and (max-width: 768px) {
+          .bg-card:nth-child(even) {
+            margin-top: 1.25rem;
+          }
+          .bg-card:nth-child(3) {
+            margin-top: 1.25rem;
+          }
+        }
+
+        @media(min-width: 768px) and (max-width: 1280px) {
+          .bg-card:nth-child(3) {
+            margin-top: 1.25rem;
+          }
+          .bg-card:nth-child(4) {
+            margin-top: 1.25rem;
+          }
+        }
+
+        @media(min-width: 1280px) {
+          .bg-card:nth-child(4) {
+            margin-top: 1.25rem;
+          }
+        }
+
+
         </style>
 
         <div class="flex flex-col justify-center items-center p-5 text-white">
@@ -120,12 +145,12 @@ class DetailAgent extends HTMLElement {
                 <h4 class="font-semibold text-lg text-skill">${this._data.abilities[1].displayName} | ${this._data.abilities[1].slot}</h4>
                 <p class="text-gray">${this._data.abilities[1].description}</p>
               </div>
-              <div class="bg-card flex flex-col rounded p-5 w-72 mt-5 items-center">
+              <div class="bg-card flex flex-col rounded p-5 w-72 items-center">
                 <img class="object-cover" width="50" height="50" src="${this._data.abilities[2].displayIcon}">
                 <h4 class="font-semibold text-lg text-skill">${this._data.abilities[2].displayName} | ${this._data.abilities[2].slot}</h4>
                 <p class="text-gray">${this._data.abilities[2].description}</p>
               </div>
-              <div class="bg-card flex flex-col rounded p-5 w-72 mt-5 items-center">
+              <div class="bg-card flex flex-col rounded p-5 w-72 items-center">
                 <img class="object-cover" width="50" height="50" src="${this._data.abilities[3].displayIcon}">
                 <h4 class="font-semibold text-lg text-skill-ult">${this._data.abilities[3].displayName} | ${this._data.abilities[3].slot}</h4>
                 <p class="text-gray">${this._data.abilities[3].description}</p>

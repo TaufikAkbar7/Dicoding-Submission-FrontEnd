@@ -11,9 +11,6 @@ module.exports = {
       // backgroundImage: (theme) => ({
       //   hero: "url('../assets/bg-hero.jpg')",
       // }),
-      width: {
-        '950px': '950px',
-      },
     },
     colors: {
       transparent: 'transparent',

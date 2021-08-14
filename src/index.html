@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,22 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
     <title>Valorant Stats</title>
 </head>
+
 <body>
-    <section class="min-h-screen bg-primaryColor py-5">
-        <div class="w-950px mx-auto bg-secondaryColor p-5">
+    <section class="min-h-screen flex flex-col bg-primaryColor py-5">
+        <div class="container mx-auto bg-secondaryColor p-5">
             <h2 class="text-xl text-white font-semibold text-center">Leadorboard Top 5</h2>
-            <data-list-leader class="flex flex-wrap justify-center items-center mt-5" id="leadorboard"></data-list-leader>
+            <data-list-leader class="flex flex-wrap justify-center items-center mt-5" id="leadorboard">
+            </data-list-leader>
         </div>
-    </section>
-    <section class="min-h-screen bg-primaryColor py-5">
-        <div class="w-950px mx-auto bg-secondaryColor p-5">
+        <div class="container mx-auto bg-secondaryColor p-5 mt-10">
             <h2 class="text-xl text-white font-semibold text-center">Agents</h2>
-            <data-list class="flex flex-wrap justify-center items-center mt-5" id="agent"></data-list>
+            <data-list-agent class="flex flex-wrap justify-center items-center mt-5" id="agent"></data-list-agent>
         </div>
-        <div class="w-950px mx-auto bg-secondaryColor p-5 mt-10">
+        <div class="container mx-auto bg-secondaryColor p-5 mt-10">
             <h2 class="text-xl text-white font-semibold text-center">Weapons</h2>
-            <data-list class="flex flex-wrap justify-center items-center mt-5" id="weapon"></data-list>
+            <data-list-weapon class="flex flex-wrap justify-center items-center mt-5" id="weapon"></data-list-weapon>
         </div>
     </section>
 </body>
+
 </html>

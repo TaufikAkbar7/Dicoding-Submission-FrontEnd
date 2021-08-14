@@ -39,6 +39,10 @@ class DataListLeader extends HTMLElement {
       cursor: pointer;
     }
 
+    .name:hover {
+      color: #fff;
+    }
+
     </style>
 
     <table>
@@ -82,13 +86,12 @@ class DataListLeader extends HTMLElement {
     `;
 
     const getElement = this.shadowDOM.querySelectorAll('.name');
-    for (let i = 0; i < getElement.length; i++){
+    for (let i = 0; i < getElement.length; i += 1) {
       getElement[i].addEventListener('click', (e) => {
         const getId = e.target.parentElement.dataset.id;
-        window.location.href = `/detailPlayer.html?id=${getId}`
-      })
+        window.location.href = `/detailPlayer.html?id=${getId}`;
+      });
     }
-    
   }
 }
 
